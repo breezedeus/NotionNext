@@ -64,7 +64,9 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       {enableClerk ? (
-        <ClerkProvider localization={zhCN}>{content}</ClerkProvider>
+        <ClerkProvider {...pageProps} localization={zhCN}>
+          {content}
+        </ClerkProvider>
       ) : (
         content
       )}
